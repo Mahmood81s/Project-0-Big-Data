@@ -1,0 +1,206 @@
+[{
+  "_id": 101,
+  "movieName": "Toy Story 2",
+  "genre": "Kids",
+  "rating": 5
+},{
+  "_id": 102,
+  "movieName": "Mission Impossible",
+  "genre": "Action",
+  "rating": 8
+},{
+  "_id": 103,
+  "movieName": "Titanic",
+  "genre": "Drama",
+  "rating": 7
+},{
+  "_id": 104,
+  "movieName": "after life",
+  "genre": "Comedy",
+  "rating": 8
+},{
+  "_id": 105,
+  "movieName": "chainsaw 2",
+  "genre": "Horror",
+  "rating": 4
+},{
+  "_id": 106,
+  "movieName": "copper Mountain",
+  "genre": "Comedy Music",
+  "rating": 4
+},{
+  "_id": 107,
+  "movieName": "The dead pool 2",
+  "genre": "Action Crime",
+  "rating": 5
+},{
+  "_id": 654,
+  "movieName": "Mega mind 2",
+  "genre": "Drama",
+  "rating": 7
+},{
+  "_id": 999,
+  "movieName": "Cliff",
+  "genre": "Advanture",
+  "rating": 6
+},{
+  "_id": 543,
+  "movieName": "Babel",
+  "genre": "History",
+  "rating": 5
+},{
+  "_id": 444,
+  "movieName": "Batman 2",
+  "genre": "Action",
+  "rating": 9
+},{
+  "_id": 888,
+  "movieName": "The Endless",
+  "genre": "Cosmos",
+  "rating": 8
+},{
+  "_id": 111,
+  "movieName": "Turning Red",
+  "genre": "Cartoon",
+  "rating": 6
+},{
+  "_id": 222,
+  "movieName": "Lucy",
+  "genre": "Action",
+  "rating": 6
+},{
+  "_id": 159,
+  "movieName": "Cheaper by the dozen",
+  "genre": "Comedy Family",
+  "rating": 4
+},{
+  "_id": 942,
+  "movieName": "Marbius",
+  "genre": "Action Horror",
+  "rating": 4
+},{
+  "_id": 123,
+  "movieName": "Toy Story 3",
+  "genre": "Kids",
+  "rating": 5
+},{
+  "_id": 23424,
+  "movieName": "Master",
+  "genre": "Drama Horror Mystery",
+  "rating": 4
+},{
+  "_id": 634535,
+  "movieName": "The Weekend Away",
+  "genre": "Crime Drama Mystery",
+  "rating": 8
+},{
+  "_id": 110,
+  "movieName": "No Exit",
+  "genre": "Drama Mystery Thriller",
+  "rating": 5
+},{
+  "_id": 112,
+  "movieName": "Joker",
+  "genre": "Crime Drama Thriller",
+  "rating": 8
+},{
+  "_id": 113,
+  "movieName": "Good Time",
+  "genre": "Crime Drama Thriller",
+  "rating": 7
+},{
+  "_id": 114,
+  "movieName": "Top Gun",
+  "genre": "Action Drama",
+  "rating": 7
+},{
+  "_id": 115,
+  "movieName": "Fifty Shades of Grey",
+  "genre": "Drama Romance Thriller",
+  "rating": 4
+},{
+  "_id": 116,
+  "movieName": "Interstellar",
+  "genre": "Advanture Drama Sci-fi",
+  "rating": 8
+},{
+  "_id": 118,
+  "movieName": "Dog",
+  "genre": "Comedy",
+  "rating": 6
+},{
+  "_id": 121,
+  "movieName": "Panama",
+  "genre": "Action Thriller",
+  "rating": 3
+},{
+  "_id": 96453,
+  "movieName": "Spy Game",
+  "genre": "Action Crime Thriller",
+  "rating": 9
+},{
+  "_id": 909,
+  "movieName": "Oceans Eleven",
+  "genre": "Crime, Thriller",
+  "rating": 7
+},{
+  "_id": 133,
+  "movieName": "Troy ",
+  "genre": "History",
+  "rating": 7
+},{
+  "_id": 144,
+  "movieName": "The Mexican",
+  "genre": "Comedy ",
+  "rating": 6
+},{
+  "_id": 155,
+  "movieName": "Good Boys",
+  "genre": "Comedy",
+  "rating": 6
+},{
+  "_id": 156,
+  "movieName": "Stuber",
+  "genre": "Comedy",
+  "rating": 6
+},{
+  "_id": 157,
+  "movieName": "Shazam",
+  "genre": "Comedy",
+  "rating": 7
+},{
+  "_id": 158,
+  "movieName": "When We First Met",
+  "genre": "Comedy",
+  "rating": 6
+},{
+  "_id": 160,
+  "movieName": "Blockers",
+  "genre": "Comedy",
+  "rating": 7
+},{
+  "_id": 161,
+  "movieName": "Thor: Ragnarok",
+  "genre": "Comedy",
+  "rating": 9
+},{
+  "_id": 201,
+  "movieName": "The Kashmir Files",
+  "genre": "History",
+  "rating": 8
+},{
+  "_id": 298,
+  "movieName": "The Last Duel",
+  "genre": "Action History",
+  "rating": 7
+},{
+  "_id": 851431,
+  "movieName": "Battle",
+  "genre": "It",
+  "rating": 8
+},{
+  "_id": 777,
+  "movieName": "Revature",
+  "genre": "Education",
+  "rating": 9
+}]
