@@ -14,8 +14,8 @@ the options. the user can also filter out the most or the least favorite movies 
 5. gitHub
 
 ## Features:
-File I/O
-Collections
+- File I/O
+- Collections
 
 
 
