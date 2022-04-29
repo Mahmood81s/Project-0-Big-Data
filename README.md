@@ -13,6 +13,11 @@ the options. the user can also filter out the most or the least favorite movies 
 4. PyMongo
 5. gitHub
 
+## Features:
+File I/O
+Collections
+
+
 
 
 
