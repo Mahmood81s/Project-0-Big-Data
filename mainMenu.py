@@ -11,10 +11,32 @@ myclient = MongoClient("mongodb://localhost:27017")
 db = myclient["Project_0_db"]  #database
 Collection = db["col_movie_3"]
 
-with open(r"C:\Users\mahmo\project_zero_cli\col_movie_3.json") as f:
-    data = json.load(f)
+
+# = open(r'C:\Users\mahmo\project_zero_cli\col_movie_3.json')  # opening JSON file
+
+#returns JSONobject as a dictionary
+#data = json.load(f)
+
+# iterating through the json list 
+#for i in data['col_movie_3']:
+#    print(i)
+    
+#closing file 
+#f.close()   
+
+#with open(r"C:\Users\mahmo\project_zero_cli\col_movie_3.json") as f:
+ #   data = json.load(f)
        
-     
+a = '{"name":"Scream", "genre":"Horror"}'
+
+y = json.loads(a)
+print("JSON string =", y)
+print()
+f = open (r'C:\Users\mahmo\project_zero_cli\col_movie_3.json', "r")
+data = json.loads(f.read())
+
+for i in data['col_movie_3']:
+    print(i)     
 """if isinstance(data, list):
     Collection.insert_many(data)
 else:
@@ -45,8 +67,8 @@ df.loc[17] = ["InterStellar", "Advanture", 7]
 
 def mainMenu():
     print("\n  ---------Welcome to Micro Movie Menu-----------\n")
-    print("0. movie list with Pandas")
-    print("1. movie list with JSON")
+    print("0. movie list [Pandas]")
+    print("1. movie list [JSON]")
     print("2. Rate your movies")
     print("3. Edit your movie list")
     print("4. Best and worst movies")
@@ -56,7 +78,7 @@ def mainMenu():
     while True:
 
         try:
-                selection = int(input("--choose one of the options above: \n"))
+                selection = int(input("--Choose one of the options above: \n"))
                 
                 if selection == 0:
                     PandaList()
@@ -106,13 +128,18 @@ def PandaList():
     
 def movieList():
         print("-----------Your Movie list-------------\n")
-        client = MongoClient()   #connecto to the server
-        db = client.Project_0_db  #return an object pointing to the db named project_0_db
-        collections = db.list_collection_names()    
-        for i in range(len(collections)):
-            aCollection = collections[i]
+        #for i in data['col_movie_3']:
+        #    print(i)
+            
+        for i in data['col_movie_3']:
+            print(i)    
+        #client = MongoClient()   #connecto to the server
+        #db = client.Project_0_db  #return an object pointing to the db named project_0_db
+        #collections = db.list_collection_names()    
+        #for i in range(len(collections)):
+        #    aCollection = collections[i]
             #print(f"Collection name: {aCollection}")
-            collObject = db.get_collection(aCollection)
+        #    collObject = db.get_collection(aCollection)
         
         
         #with open(r"C:\Users\mahmo\project_zero_cli\col_movie_3.json") as f:
@@ -120,11 +147,11 @@ def movieList():
         
          
 
-        for doc in db.col_movie_3.find({}):
-            print(f"{doc['movieName']} | {doc['genre']} | Rating: {doc['rating']}")  
+        #for doc in db.col_movie_3.find({}):
+        #    print(f"{doc['movieName']} | {doc['genre']} | Rating: {doc['rating']}")  
             
         
-        anykey = input("\n--Enter anykey to return to Main Menu: \n") 
+        anykey = input("\n--Enter anykey to return to Main Menu........... \n") 
         mainMenu()   
 
 def rating():
@@ -133,7 +160,10 @@ def rating():
         db = client.Project_0_db  #return an object pointing to the db named project_0_db
         collections = db.list_collection_names()    
         
-        pickMovie = input("--Which movie from the list you would like to rate again?\n")
+        pickMovie = input("--Which movie from the list you would like to update the rating?\n")
+        
+        for doc in db.col_movie_3.find({"movieName":pickMovie}):
+            print (f"-------The current rating for {doc['movieName']} is {doc['rating']}--------- \n")
         
         rateMovie = int(input(f"--What do you rate the movie '{pickMovie}': \n"))
             
@@ -174,7 +204,7 @@ def favoriteMovies():
                                 "genre": pickOp_G,
                                 "rating" : pickOp_R}
                     db.col_movie_3.insert_one(records) #for doc in documents:client.update_one({'_id': doc['_id']}, doc, upsert=True)
-                    print(f"\n ***you have successfully added '{pickOp_N}' to your movie list***\n ")
+                    print(f"\n ***You have successfully added '{pickOp_N}' to your movie list***\n ")
                 elif pickOp_2 == 2:
                     pickOp_I2 = int(input("--Pick a unique id for your second added movie: \n"))
                     pickOp_N2 = input("--Enter the name of the second movie you want to add: \n")
@@ -189,28 +219,39 @@ def favoriteMovies():
             elif pickOp == 2:
                 removeOp= input(" Which one your existing movies you would like to remove? \n")
                 db.col_movie_3.delete_one({"movieName" : removeOp}) 
-                print(f"++ you have successfully deleted the movie {removeOp} from your movie list ++ \n") 
+                print(f"++ You have successfully deleted the movie {removeOp} from your movie list ++ \n") 
             elif pickOp == 3:
                 replaceOp = input(" Which movie name you want to change? \n")
                 replaceOp2 = input(" With what movie name? \n")
                 db.col_movie_3.update_one(
                 {"movieName": replaceOp}, 
                 { "$set" : { "movieName" : replaceOp2}})
-                print(f"+++ you have successfully has changed {replaceOp} to {replaceOp2} +++ ")
+                print(f"+++ You have successfully has changed {replaceOp} to {replaceOp2} +++ ")
             else:
-                print("\ninvalid entry! enter 1-3")    
+                print("\nInvalid entry! enter 1-3")    
                 
                 
         except pymongo.errors.DuplicateKeyError:
             print("          ++++++ This id already exists ++++++ ")
             print(" ------ Please choose another id for the new movie ------\n")
-        anykey = input("\n--Enter any key to return to the Main Menu \n") 
+        anykey = input("\n--Enter any key to return to the Main Menu........... \n") 
         mainMenu()     
 def BeWor():
     client = MongoClient()
     db = client.Project_0_db
-    pickBeWor = int(input(f"\n1.popular movies\n2.unpopular movies\n"))
+      
+    
+    pickBeWor = int(input(f"\n1.Popular movies\n2.Unpopular movies\n"))
     if pickBeWor == 1:
+        a = db.col_movie_3.count_documents({"rating":{"$gte" :7}})
+        y = json.loads(a)
+        print("JSON string =", y)
+        print()
+        f = open (r'C:\Users\mahmo\project_zero_cli\col_movie_3.json', "r")
+        data = json.loads(f.read())
+
+        for i in data['col_movie_3']:
+            print(i)
         countDoc = db.col_movie_3.count_documents({"rating":{"$gte" :7}})
         print(f"\n +++++There are {countDoc} popular movies in your list with the rating above 7  +++++\n")
         #print("\n---These are movies with the rating above 7---\n")
@@ -225,9 +266,9 @@ def BeWor():
             print(f"{doc['movieName']} | Rating:{doc['rating']}") 
             
     else:
-        print("invalid entry! enter 1 or 2") 
+        print("Invalid entry! enter 1 or 2") 
         
-    anykey = input("\n--Press Enter to return to Main Menu \n") 
+    anykey = input("\n--Press Enter to return to Main Menu........... \n") 
     mainMenu()                   
 
 def LookUp():
@@ -241,7 +282,7 @@ def LookUp():
         
         print(f"{doc['_id']} | Movie Name: {doc['movieName']}")
 
-    anykey = input("\n--Press Enter to return to Main Menu \n") 
+    anykey = input("\n--Press Enter to return to Main Menu........... \n") 
     mainMenu()    
 
 mainMenu()

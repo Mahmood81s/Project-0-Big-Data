@@ -1,4 +1,6 @@
-[{
+{
+  "col_movie_3" : [
+    {
   "_id": 101,
   "movieName": "Toy Story 2",
   "genre": "Kids",
@@ -204,3 +206,4 @@
   "genre": "Education",
   "rating": 9
 }]
+}
